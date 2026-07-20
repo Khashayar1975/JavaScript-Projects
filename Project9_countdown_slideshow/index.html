@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Project9 Countdown Slideshow</title>
+
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+
+    <!-- Countdown timer section -->
+    <section class="countdown-section">
+        <h1>Countdown Timer</h1>
+
+        <p>How many seconds would you like to set your timer for?</p>
+
+        <input type="number" id="seconds" value="10" min="1">
+
+        <button type="button" onclick="countdown()">
+            Start Countdown
+        </button>
+
+        <p id="timer"></p>
+    </section>
+
+    <hr>
+
+    <!-- Slideshow section -->
+    <section>
+        <h2>Basic JavaScript Slideshow</h2>
+
+        <div class="slideshow-container">
+
+            <!-- First slide -->
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+
+                <img
+                    src="img/img1.jpg"
+                    alt="First slideshow image"
+                >
+
+                <div class="text">First Image</div>
+            </div>
+
+            <!-- Second slide -->
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+
+                <img
+                    src="img/img2.jpg"
+                    alt="Second slideshow image"
+                >
+
+                <div class="text">Second Image</div>
+            </div>
+
+            <!-- Third slide -->
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+
+                <img
+                    src="img/img3.jpg"
+                    alt="Third slideshow image"
+                >
+
+                <div class="text">Third Image</div>
+            </div>
+
+            <!-- Previous and next controls -->
+            <button
+                class="prev"
+                type="button"
+                onclick="plusSlides(-1)"
+                aria-label="Previous slide"
+            >
+                &#10094;
+            </button>
+
+            <button
+                class="next"
+                type="button"
+                onclick="plusSlides(1)"
+                aria-label="Next slide"
+            >
+                &#10095;
+            </button>
+
+        </div>
+
+        <!-- Slideshow navigation dots -->
+        <div class="dots-container">
+            <span
+                class="dot"
+                onclick="currentSlide(1)"
+                aria-label="Show slide 1"
+            ></span>
+
+            <span
+                class="dot"
+                onclick="currentSlide(2)"
+                aria-label="Show slide 2"
+            ></span>
+
+            <span
+                class="dot"
+                onclick="currentSlide(3)"
+                aria-label="Show slide 3"
+            ></span>
+        </div>
+    </section>
+
+    <!-- Link JavaScript after the HTML elements are loaded -->
+    <script src="JS/main.js"></script>
+
+</body>
+</html>

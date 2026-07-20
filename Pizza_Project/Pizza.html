@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pizza Drill</title>
+
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="Pizza_CSS/Pizza.css">
+</head>
+
+<body>
+
+    <main id="menuBG">
+        <h1>Pizza Drill Tutorial</h1>
+
+        <!-- The button calls the JavaScript receipt function. -->
+        <button id="btnOrder" type="button" onclick="getReceipt()">
+            Place Order
+        </button>
+
+        <form id="frmMenu">
+
+            <!-- Pizza size options -->
+            <section class="menu left">
+                <h2>Size</h2>
+
+                <label>
+                    <input
+                        class="size"
+                        type="radio"
+                        name="Size"
+                        value="Personal Pizza"
+                    >
+                    Personal Pizza
+                </label>
+
+                <label>
+                    <input
+                        class="size"
+                        type="radio"
+                        name="Size"
+                        value="Small Pizza"
+                    >
+                    Small Pizza
+                </label>
+
+                <label>
+                    <input
+                        class="size"
+                        type="radio"
+                        name="Size"
+                        value="Medium Pizza"
+                    >
+                    Medium Pizza
+                </label>
+
+                <label>
+                    <input
+                        class="size"
+                        type="radio"
+                        name="Size"
+                        value="Large Pizza"
+                        checked
+                    >
+                    Large Pizza
+                </label>
+
+                <label>
+                    <input
+                        class="size"
+                        type="radio"
+                        name="Size"
+                        value="Extra Large Pizza"
+                    >
+                    Extra Large Pizza
+                </label>
+            </section>
+
+            <!-- Vegetable topping options -->
+            <section class="menu center">
+                <h2>Vegetables</h2>
+
+                <label>
+                    <input
+                        class="toppings"
+                        type="checkbox"
+                        name="Topping"
+                        value="Mushrooms"
+                    >
+                    Mushrooms
+                </label>
+
+                <label>
+                    <input
+                        class="toppings"
+                        type="checkbox"
+                        name="Topping"
+                        value="Onions"
+                    >
+                    Onions
+                </label>
+
+                <label>
+                    <input
+                        class="toppings"
+                        type="checkbox"
+                        name="Topping"
+                        value="Tomatoes"
+                    >
+                    Tomatoes
+                </label>
+
+                <label>
+                    <input
+                        class="toppings"
+                        type="checkbox"
+                        name="Topping"
+                        value="Olives"
+                    >
+                    Olives
+                </label>
+
+                <label>
+                    <input
+                        class="toppings"
+                        type="checkbox"
+                        name="Topping"
+                        value="Green Peppers"
+                    >
+                    Green Peppers
+                </label>
+            </section>
+
+            <!-- Meat topping options -->
+            <section class="menu right">
+                <h2>Meats</h2>
+
+                <label>
+                    <input
+                        class="toppings"
+                        type="checkbox"
+                        name="Topping"
+                        value="Pepperoni"
+                    >
+                    Pepperoni
+                </label>
+
+                <label>
+                    <input
+                        class="toppings"
+                        type="checkbox"
+                        name="Topping"
+                        value="Sausage"
+                    >
+                    Sausage
+                </label>
+
+                <label>
+                    <input
+                        class="toppings"
+                        type="checkbox"
+                        name="Topping"
+                        value="Canadian Bacon"
+                    >
+                    Canadian Bacon
+                </label>
+
+                <label>
+                    <input
+                        class="toppings"
+                        type="checkbox"
+                        name="Topping"
+                        value="Ground Beef"
+                    >
+                    Ground Beef
+                </label>
+
+                <label>
+                    <input
+                        class="toppings"
+                        type="checkbox"
+                        name="Topping"
+                        value="Anchovy"
+                    >
+                    Anchovy
+                </label>
+
+                <label>
+                    <input
+                        class="toppings"
+                        type="checkbox"
+                        name="Topping"
+                        value="Chicken"
+                    >
+                    Chicken
+                </label>
+
+                <label>
+                    <input
+                        class="toppings"
+                        type="checkbox"
+                        name="Topping"
+                        value="Salami"
+                    >
+                    Salami
+                </label>
+            </section>
+
+            <!-- Receipt output -->
+            <section id="cart" aria-live="polite">
+                <div id="showText"></div>
+                <div id="totalPrice"></div>
+            </section>
+
+        </form>
+    </main>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="Pizza_JavaScript/Pizza.js"></script>
+</body>
+</html>

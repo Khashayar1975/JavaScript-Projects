@@ -1,0 +1,121 @@
+/* Page background and default text styling. */
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #7f1d1d, #b91c1c);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Main pizza menu container. */
+#menuBG {
+    width: 760px;
+    max-width: calc(100vw - 30px);
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 16px;
+    background-color: #fff7ed;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+}
+
+/* Main title. */
+h1 {
+    margin-top: 0;
+    color: #7c2d12;
+    text-align: center;
+}
+
+/* Section headings. */
+h2 {
+    margin-top: 0;
+    color: #9a3412;
+}
+
+/* Menu form layout. */
+#frmMenu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+/* Shared menu-column styling. */
+.menu {
+    min-height: 280px;
+    padding: 18px;
+    border: 2px solid #fdba74;
+    border-radius: 12px;
+    background-color: #ffedd5;
+}
+
+/* Stack option labels vertically. */
+.menu label {
+    display: block;
+    margin: 10px 0;
+    color: #431407;
+    cursor: pointer;
+}
+
+/* Make checkboxes and radio buttons easier to click. */
+.menu input {
+    margin-right: 8px;
+}
+
+/* Receipt area. */
+#cart {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    gap: 20px;
+    min-height: 150px;
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #fff;
+    border: 2px dashed #fb923c;
+}
+
+/* Receipt text section. */
+#showText {
+    color: #431407;
+    line-height: 1.7;
+}
+
+/* Total price section. */
+#totalPrice {
+    text-align: right;
+    color: #7c2d12;
+    font-size: 1.3rem;
+}
+
+/* Order button. */
+#btnOrder {
+    display: block;
+    width: 180px;
+    height: 46px;
+    margin: 0 auto 24px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ea580c;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#btnOrder:hover {
+    background-color: #c2410c;
+}
+
+/* Responsive layout for smaller screens. */
+@media (max-width: 760px) {
+    #frmMenu {
+        grid-template-columns: 1fr;
+    }
+
+    #cart {
+        grid-template-columns: 1fr;
+    }
+
+    #totalPrice {
+        text-align: left;
+    }
+}

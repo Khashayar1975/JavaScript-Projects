@@ -1,0 +1,127 @@
+/* Apply predictable sizing to all elements. */
+html {
+    font-size: 70%;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+/* Center the calculator on the page. */
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+}
+
+/* Main calculator container. */
+.calculator {
+    border: 1.2px solid darkslategrey;
+    border-radius: 12px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    max-width: calc(100vw - 30px);
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+}
+
+/* Calculator display screen. */
+.calculator-screen {
+    width: 100%;
+    height: 90px;
+    border: none;
+    background-color: #111827;
+    color: white;
+    font-size: 5rem;
+    text-align: right;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+/* Shared button styles. */
+button {
+    height: 72px;
+    border-radius: 6px;
+    border: 1px solid darkslategrey;
+    background-color: #f8fafc;
+    color: #111827;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: transform 0.08s ease, background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #e2e8f0;
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+/* Operator button styles. */
+.operator {
+    background-color: #dbeafe;
+    color: #0f172a;
+}
+
+.operator:hover {
+    background-color: #bfdbfe;
+}
+
+/* Clear button styles. */
+.all-clear {
+    background-color: #dc2626;
+    border-color: #991b1b;
+    color: white;
+}
+
+.all-clear:hover {
+    background-color: #b91c1c;
+}
+
+/* Equals button spans multiple rows. */
+.equal-sign {
+    background-color: #2563eb;
+    border-color: #1d4ed8;
+    color: white;
+    height: 100%;
+    grid-area: 2 / 4 / 6 / 5;
+}
+
+.equal-sign:hover {
+    background-color: #1d4ed8;
+}
+
+/* Arrange the buttons in a four-column grid. */
+.calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 12px;
+    padding: 18px;
+}
+
+/* Make the calculator more compact on smaller screens. */
+@media (max-width: 520px) {
+    .calculator {
+        width: 95vw;
+    }
+
+    .calculator-screen {
+        font-size: 4rem;
+        height: 80px;
+    }
+
+    button {
+        height: 64px;
+        font-size: 2.6rem;
+    }
+}

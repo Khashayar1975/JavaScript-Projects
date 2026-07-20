@@ -1,0 +1,95 @@
+/* Centers the complete game on the page. */
+.center-container {
+    width: 608px;
+    max-width: calc(100vw - 24px);
+    margin: 30px auto;
+    text-align: center;
+}
+
+/* Centers and customizes the heading. */
+h1 {
+    text-align: center;
+    font-family: Georgia, "Times New Roman", serif;
+    margin-bottom: 8px;
+}
+
+.instructions,
+.status {
+    font-family: Arial, sans-serif;
+}
+
+.status {
+    min-height: 24px;
+    font-weight: bold;
+}
+
+/* Keeps the canvas positioned directly over the table. */
+.board-wrapper {
+    position: relative;
+    width: 608px;
+    height: 608px;
+    max-width: 100%;
+    margin: 20px auto;
+}
+
+/* Collapses cell borders and hides the outside table border. */
+table {
+    width: 608px;
+    height: 608px;
+    border-collapse: collapse;
+    border-style: hidden;
+    table-layout: fixed;
+}
+
+/* Styles the nine game squares. */
+td {
+    cursor: pointer;
+    border: 4px solid #8f70ff;
+    padding: 0;
+    width: 200px;
+    height: 200px;
+
+    /* Makes the X and O images fit neatly inside each square. */
+    background-size: 82%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Slight hover effect for empty-looking squares. */
+td:hover {
+    background-color: #f4f1ff;
+}
+
+/* Places the canvas above the table without blocking mouse clicks. */
+canvas {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    width: 608px;
+    height: 608px;
+    pointer-events: none;
+}
+
+/* Styles the reset button. */
+button {
+    cursor: pointer;
+    border: 0;
+    border-radius: 6px;
+    padding: 10px 18px;
+    font-size: 16px;
+}
+
+/* Makes the fixed-size course board scale on smaller screens. */
+@media (max-width: 640px) {
+    .board-wrapper,
+    table,
+    canvas {
+        width: calc(100vw - 24px);
+        height: calc(100vw - 24px);
+    }
+
+    td {
+        width: calc((100vw - 24px) / 3);
+        height: calc((100vw - 24px) / 3);
+    }
+}

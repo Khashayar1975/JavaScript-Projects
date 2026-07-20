@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Tic Tac Toe Online!</title>
+
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="css/game.css">
+</head>
+
+<body id="body">
+
+    <div class="center-container">
+        <h1>TIC TAC TOE GAME</h1>
+        <p class="instructions">You are X. Click an empty square to play.</p>
+
+        <!-- The canvas is placed over the table and draws the winning line. -->
+        <div class="board-wrapper">
+            <canvas id="win-lines" width="608" height="608"></canvas>
+
+            <table aria-label="Tic Tac Toe board">
+                <tr>
+                    <td id="0" onclick="placeXOrO('0')" aria-label="Square 1"></td>
+                    <td id="1" onclick="placeXOrO('1')" aria-label="Square 2"></td>
+                    <td id="2" onclick="placeXOrO('2')" aria-label="Square 3"></td>
+                </tr>
+                <tr>
+                    <td id="3" onclick="placeXOrO('3')" aria-label="Square 4"></td>
+                    <td id="4" onclick="placeXOrO('4')" aria-label="Square 5"></td>
+                    <td id="5" onclick="placeXOrO('5')" aria-label="Square 6"></td>
+                </tr>
+                <tr>
+                    <td id="6" onclick="placeXOrO('6')" aria-label="Square 7"></td>
+                    <td id="7" onclick="placeXOrO('7')" aria-label="Square 8"></td>
+                    <td id="8" onclick="placeXOrO('8')" aria-label="Square 9"></td>
+                </tr>
+            </table>
+        </div>
+
+        <p id="status" class="status">Your turn</p>
+
+        <button type="button" onclick="resetGame()">Reset Game</button>
+    </div>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="js/tictactoe.js"></script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beautiful Plants Gallery</title>
+
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="CSS/one_page_website.css">
+</head>
+
+<body>
+
+    <header class="hero">
+        <h1>Beautiful Plants Gallery</h1>
+        <p>Click any thumbnail to open the lightbox.</p>
+    </header>
+
+    <main>
+        <!-- Thumbnail gallery -->
+        <section class="gallery" aria-label="Plant image gallery">
+
+            <button
+                class="gallery-item"
+                type="button"
+                onclick="openModal(); currentSlide(1)"
+                aria-label="Open patterned plants image"
+            >
+                <img
+                    src="images/plant4-small.png"
+                    alt="Patterned green, white, and pink plants"
+                >
+            </button>
+
+            <button
+                class="gallery-item"
+                type="button"
+                onclick="openModal(); currentSlide(2)"
+                aria-label="Open succulent plants image"
+            >
+                <img
+                    src="images/plant3-small.png"
+                    alt="Blue and purple succulent plants"
+                >
+            </button>
+
+            <button
+                class="gallery-item"
+                type="button"
+                onclick="openModal(); currentSlide(3)"
+                aria-label="Open sunflower image"
+            >
+                <img
+                    src="images/plant2-small.png"
+                    alt="Bright yellow sunflowers"
+                >
+            </button>
+
+            <button
+                class="gallery-item"
+                type="button"
+                onclick="openModal(); currentSlide(4)"
+                aria-label="Open pink blossoms image"
+            >
+                <img
+                    src="images/plant1-small.png"
+                    alt="Pink blossoms on branches"
+                >
+            </button>
+
+        </section>
+    </main>
+
+    <!-- Lightbox modal -->
+    <div id="myModal" class="modal" aria-hidden="true">
+
+        <!-- Close button -->
+        <button
+            class="close"
+            type="button"
+            onclick="closeModal()"
+            aria-label="Close gallery"
+        >
+            &times;
+        </button>
+
+        <div class="modal-content">
+
+            <div class="mySlides">
+                <div class="numbertext">1 / 4</div>
+                <img
+                    src="images/plant4.png"
+                    alt="Patterned green, white, and pink plants"
+                >
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">2 / 4</div>
+                <img
+                    src="images/plant3.png"
+                    alt="Blue and purple succulent plants"
+                >
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">3 / 4</div>
+                <img
+                    src="images/plant2.png"
+                    alt="Bright yellow sunflowers"
+                >
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">4 / 4</div>
+                <img
+                    src="images/plant1.png"
+                    alt="Pink blossoms on branches"
+                >
+            </div>
+
+            <!-- Previous and next controls -->
+            <button
+                class="prev"
+                type="button"
+                onclick="plusSlides(-1)"
+                aria-label="Previous image"
+            >
+                &#10094;
+            </button>
+
+            <button
+                class="next"
+                type="button"
+                onclick="plusSlides(1)"
+                aria-label="Next image"
+            >
+                &#10095;
+            </button>
+
+            <!-- Captions -->
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+            <!-- Thumbnail controls inside the modal -->
+            <div class="modal-thumbnails">
+                <img
+                    class="demo"
+                    src="images/plant4-small.png"
+                    onclick="currentSlide(1)"
+                    alt="Patterned tropical plants"
+                >
+
+                <img
+                    class="demo"
+                    src="images/plant3-small.png"
+                    onclick="currentSlide(2)"
+                    alt="Colorful succulents"
+                >
+
+                <img
+                    class="demo"
+                    src="images/plant2-small.png"
+                    onclick="currentSlide(3)"
+                    alt="Golden sunflowers"
+                >
+
+                <img
+                    class="demo"
+                    src="images/plant1-small.png"
+                    onclick="currentSlide(4)"
+                    alt="Pink spring blossoms"
+                >
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="JS/one_page_website.js"></script>
+</body>
+</html>
